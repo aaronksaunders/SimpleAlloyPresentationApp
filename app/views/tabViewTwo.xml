@@ -1,0 +1,5 @@
+<Alloy>
+  <Tab title="Tab View Two">
+    <Window title="Tab View Two" class='container'></Window>
+  </Tab>
+</Alloy>

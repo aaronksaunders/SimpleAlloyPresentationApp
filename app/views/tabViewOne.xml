@@ -1,0 +1,7 @@
+<Alloy>
+  <Tab id="tab_one" title="Tab View One">
+    <Window title="Tab View One" class='container'>
+      <Button id="open_button">Open Child Window</Button>
+    </Window>
+  </Tab>
+</Alloy>
