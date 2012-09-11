@@ -28,7 +28,7 @@ lib                 put your own libraries here and use require('name') to load 
 
 Also, in the root is the alloy.jmk file and config.json.  Alloy.jmk acts like a makefile and can be used to hook into the Alloy compiler to customize the build process. The config.json file is where you can declare runtime contstants, and widget dependencies.
 
-1) craete the project
+1) create the project
 2) switch to the root directory of the project and type "alloy new ."
 3) run project, should say hello world
 3a) open index.js and delete everything except "$.index.open();" that is all we need
@@ -45,3 +45,14 @@ to seperate the each window's functionality
 8) create button in tabViewOne.xml
 9) open tableViewOne.js in controllers folder, add the code for the click event listener. We can access the
 button object using the id like this "$.open_button.addEventListener("click", function(e) {})"
+10) add a simple alert using "console.debug("in open_button click event handler");" and save and run project
+11) lets create the controller to open the new child window
+12) "alloy generate controller tabViewOneChild"
+13) edit "tabViewOneChild.xml" add a window object and set the id to "child_window" so we can access it in
+the controller when we need to open it
+14)edit tabViewOneChild.js in the controllers folder, add a method called "openMainWindow", be sure to "export" it
+so we can call it from other controllers
+15) back to the tabViewOne.js button event listener,add the code to open the child window
+16) first we need to get the controller object for tabViewOneChild,  var tabViewOneChildController = Alloy.getController('tabViewOneChild');
+17) now that we have the controller, we can call the exported methods, passing in the current tab as a parameter
+
