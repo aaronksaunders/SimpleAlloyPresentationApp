@@ -1,7 +1,4 @@
 function Controller() {
-    function doClick(e) {
-        alert($.label.text);
-    }
     require("alloy/controllers/BaseController").apply(this, Array.prototype.slice.call(arguments));
     var $ = this, exports = {};
     $.__views.index = A$(Ti.UI.createTabGroup({
